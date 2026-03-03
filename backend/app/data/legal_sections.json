@@ -1,0 +1,354 @@
+[
+    {
+  "id": "IPC_378",
+  "act": "IPC",
+  "section": "378",
+  "title": "Theft",
+  "summary": "Defines theft as dishonest taking of movable property without consent.",
+  "content": "Whoever, intending to take dishonestly any movable property out of the possession of any person without that person's consent, moves that property to such taking, commits theft.",
+  "punishment": "Punishment prescribed under Section 379 IPC.",
+  "keywords": ["theft", "dishonest taking", "movable property", "without consent"]
+},
+    {
+  "id": "IPC_379",
+  "act": "IPC",
+  "section": "379",
+  "title": "Punishment for Theft",
+  "summary": "Provides punishment for committing theft.",
+  "content": "Whoever commits theft shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
+  "punishment": "Imprisonment up to 3 years, or fine, or both.",
+  "keywords": ["punishment", "theft penalty", "imprisonment"]
+},
+    {
+  "id": "IPC_415",
+  "act": "IPC",
+  "section": "415",
+  "title": "Cheating",
+  "summary": "Defines cheating involving deception and dishonest inducement.",
+  "content": "Whoever, by deceiving any person, fraudulently or dishonestly induces that person to deliver property, or to consent to retain property, or intentionally induces the person to do or omit anything which causes damage or harm, commits cheating.",
+  "punishment": "Punishment provided under Section 417 or 420 IPC depending on gravity.",
+  "keywords": ["cheating", "fraud", "deception", "inducement"]
+},
+    {
+  "id": "IPC_420",
+  "act": "IPC",
+  "section": "420",
+  "title": "Cheating and Dishonestly Inducing Delivery of Property",
+  "summary": "Punishes aggravated cheating involving property or valuable security.",
+  "content": "Whoever cheats and thereby dishonestly induces the person deceived to deliver property or to make, alter or destroy valuable security shall be punished.",
+  "punishment": "Imprisonment up to 7 years and fine.",
+  "keywords": ["cheating", "property fraud", "financial fraud", "dishonest inducement"]
+},
+    {
+  "id": "IPC_354",
+  "act": "IPC",
+  "section": "354",
+  "title": "Assault or Criminal Force to Woman with Intent to Outrage Her Modesty",
+  "summary": "Punishes assault or use of criminal force against a woman intending to outrage her modesty.",
+  "content": "Whoever assaults or uses criminal force to any woman, intending to outrage or knowing it to be likely that he will outrage her modesty, commits an offence under this section.",
+  "punishment": "Imprisonment not less than 1 year and up to 5 years, and fine.",
+  "keywords": ["assault on woman", "outraging modesty", "criminal force"]
+},
+    {
+  "id": "IPC_354A",
+  "act": "IPC",
+  "section": "354A",
+  "title": "Sexual Harassment",
+  "summary": "Defines and penalizes sexual harassment including physical contact, demand for sexual favors, and showing pornography.",
+  "content": "A man committing physical contact and advances involving unwelcome and explicit sexual overtures, or demanding sexual favors, or showing pornography against the will of a woman, or making sexually colored remarks, commits sexual harassment.",
+  "punishment": "Imprisonment up to 3 years depending on nature of act, and/or fine.",
+  "keywords": ["sexual harassment", "unwelcome advances", "sexual remarks"]
+},
+    {
+  "id": "IPC_375",
+  "act": "IPC",
+  "section": "375",
+  "title": "Rape",
+  "summary": "Defines rape including sexual acts without consent under specified circumstances.",
+  "content": "A man is said to commit rape if he engages in specified sexual acts with a woman against her will, without her consent, by coercion, fraud, misrepresentation, or when she is incapable of giving consent.",
+  "punishment": "Punishment provided under Section 376 IPC.",
+  "keywords": ["rape", "sexual assault", "lack of consent", "coercion"]
+},
+    {
+  "id": "IPC_376",
+  "act": "IPC",
+  "section": "376",
+  "title": "Punishment for Rape",
+  "summary": "Provides punishment for rape including aggravated circumstances.",
+  "content": "Whoever commits rape shall be punished with rigorous imprisonment not less than 10 years, which may extend to life, and shall also be liable to fine.",
+  "punishment": "Minimum 10 years imprisonment, extendable to life, and fine.",
+  "keywords": ["rape punishment", "rigorous imprisonment", "sexual offence"]
+},
+    {
+  "id": "POCSO_3",
+  "act": "POCSO",
+  "section": "3",
+  "title": "Penetrative Sexual Assault",
+  "summary": "Defines penetrative sexual assault against a child.",
+  "content": "A person commits penetrative sexual assault if he penetrates his penis or any object into the vagina, mouth, urethra or anus of a child, or makes the child do so.",
+  "punishment": "Punishment provided under Section 4 POCSO.",
+  "keywords": ["child sexual assault", "penetrative assault", "minor victim"]
+},
+    {
+  "id": "POCSO_4",
+  "act": "POCSO",
+  "section": "4",
+  "title": "Punishment for Penetrative Sexual Assault",
+  "summary": "Provides punishment for penetrative sexual assault on a child.",
+  "content": "Whoever commits penetrative sexual assault shall be punished with imprisonment not less than 10 years, which may extend to life, and fine.",
+  "punishment": "Minimum 10 years imprisonment, extendable to life, and fine.",
+  "keywords": ["POCSO punishment", "child protection", "sexual crime against minor"]
+},
+    {
+  "id": "POCSO_4",
+  "act": "POCSO",
+  "section": "4",
+  "title": "Punishment for Penetrative Sexual Assault",
+  "summary": "Provides punishment for penetrative sexual assault on a child.",
+  "content": "Whoever commits penetrative sexual assault shall be punished with imprisonment not less than 10 years, which may extend to life, and fine.",
+  "punishment": "Minimum 10 years imprisonment, extendable to life, and fine.",
+  "keywords": ["POCSO punishment", "child protection", "sexual crime against minor"]
+},
+    {
+  "id": "POCSO_7",
+  "act": "POCSO",
+  "section": "7",
+  "title": "Sexual Assault",
+  "summary": "Defines sexual assault involving physical contact without penetration against a child.",
+  "content": "Whoever, with sexual intent, touches the vagina, penis, anus, or breast of a child or makes the child touch such parts commits sexual assault.",
+  "punishment": "Punishment provided under Section 8 POCSO.",
+  "keywords": ["child sexual assault", "non-penetrative assault", "minor victim"]
+},
+    {
+  "id": "POCSO_8",
+  "act": "POCSO",
+  "section": "8",
+  "title": "Punishment for Sexual Assault",
+  "summary": "Provides punishment for sexual assault on a child.",
+  "content": "Whoever commits sexual assault shall be punished with imprisonment not less than 3 years and may extend to 5 years, and fine.",
+  "punishment": "Minimum 3 years imprisonment, extendable to 5 years, and fine.",
+  "keywords": ["POCSO punishment", "child protection", "sexual offence"]
+},
+    {
+  "id": "IPC_406",
+  "act": "IPC",
+  "section": "406",
+  "title": "Punishment for Criminal Breach of Trust",
+  "summary": "Provides punishment for criminal breach of trust.",
+  "content": "Whoever commits criminal breach of trust shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
+  "punishment": "Imprisonment up to 3 years, or fine, or both.",
+  "keywords": ["breach of trust punishment", "misappropriation penalty"]
+},
+    {
+  "id": "IPC_323",
+  "act": "IPC",
+  "section": "323",
+  "title": "Punishment for Voluntarily Causing Hurt",
+  "summary": "Punishes voluntary causing of simple hurt.",
+  "content": "Whoever voluntarily causes hurt shall be punished unless covered under grievous hurt provisions.",
+  "punishment": "Imprisonment up to 1 year, or fine up to ₹1000, or both.",
+  "keywords": ["hurt", "simple injury", "assault injury"]
+},
+    {
+  "id": "IPC_324",
+  "act": "IPC",
+  "section": "324",
+  "title": "Voluntarily Causing Hurt by Dangerous Weapons",
+  "summary": "Punishes causing hurt using dangerous weapons or means.",
+  "content": "Whoever voluntarily causes hurt by means of any instrument for shooting, stabbing, cutting, or any weapon likely to cause death, commits an offence under this section.",
+  "punishment": "Imprisonment up to 3 years, or fine, or both.",
+  "keywords": ["dangerous weapon", "assault", "hurt with weapon"]
+},
+    {
+  "id": "IPC_325",
+  "act": "IPC",
+  "section": "325",
+  "title": "Punishment for Voluntarily Causing Grievous Hurt",
+  "summary": "Punishes voluntarily causing grievous hurt.",
+  "content": "Whoever voluntarily causes grievous hurt shall be punished unless covered under aggravated provisions.",
+  "punishment": "Imprisonment up to 7 years and fine.",
+  "keywords": ["grievous hurt", "serious injury", "assault"]
+},
+    {
+  "id": "IPC_503",
+  "act": "IPC",
+  "section": "503",
+  "title": "Criminal Intimidation",
+  "summary": "Defines criminal intimidation involving threats to cause harm.",
+  "content": "Whoever threatens another with injury to person, reputation, or property with intent to cause alarm or compel action commits criminal intimidation.",
+  "punishment": "Punishment provided under Section 506 IPC.",
+  "keywords": ["threat", "criminal intimidation", "threat to life"]
+},
+    {
+  "id": "IPC_506",
+  "act": "IPC",
+  "section": "506",
+  "title": "Punishment for Criminal Intimidation",
+  "summary": "Provides punishment for criminal intimidation.",
+  "content": "Whoever commits criminal intimidation shall be punished with imprisonment which may extend to two years, or with fine, or both. If threat is to cause death or grievous hurt, punishment may extend to seven years.",
+  "punishment": "Up to 2 years, or up to 7 years for aggravated threats.",
+  "keywords": ["threat punishment", "intimidation penalty"]
+},
+    {
+  "id": "IPC_341",
+  "act": "IPC",
+  "section": "341",
+  "title": "Punishment for Wrongful Restraint",
+  "summary": "Punishes obstructing a person from proceeding in a direction in which they have a right to proceed.",
+  "content": "Whoever wrongfully restrains any person shall be punished under this section.",
+  "punishment": "Simple imprisonment up to 1 month, or fine up to ₹500, or both.",
+  "keywords": ["wrongful restraint", "blocking way", "illegal obstruction"]
+},
+    {
+  "id": "IPC_342",
+  "act": "IPC",
+  "section": "342",
+  "title": "Punishment for Wrongful Confinement",
+  "summary": "Punishes unlawful confinement of a person.",
+  "content": "Whoever wrongfully confines any person shall be punished under this section.",
+  "punishment": "Imprisonment up to 1 year, or fine up to ₹1000, or both.",
+  "keywords": ["wrongful confinement", "illegal detention", "locking someone"]
+},
+    {
+  "id": "IPC_294",
+  "act": "IPC",
+  "section": "294",
+  "title": "Obscene Acts and Songs",
+  "summary": "Punishes obscene acts or songs in public places causing annoyance.",
+  "content": "Whoever performs obscene acts in public places or sings obscene songs causing annoyance commits an offence under this section.",
+  "punishment": "Imprisonment up to 3 months, or fine, or both.",
+  "keywords": ["obscene act", "public indecency", "annoyance"]
+},
+    {
+  "id": "IPC_504",
+  "act": "IPC",
+  "section": "504",
+  "title": "Intentional Insult with Intent to Provoke Breach of Peace",
+  "summary": "Punishes intentional insult likely to provoke breach of peace.",
+  "content": "Whoever intentionally insults another, intending or knowing it to be likely to provoke breach of peace, commits an offence.",
+  "punishment": "Imprisonment up to 2 years, or fine, or both.",
+  "keywords": ["intentional insult", "breach of peace", "provocation"]
+},
+    {
+  "id": "IPC_34",
+  "act": "IPC",
+  "section": "34",
+  "title": "Acts Done by Several Persons in Furtherance of Common Intention",
+  "summary": "Establishes joint liability when a criminal act is done by several persons with common intention.",
+  "content": "When a criminal act is done by several persons in furtherance of common intention, each person is liable as if he alone committed it.",
+  "punishment": "Liability same as principal offence committed.",
+  "keywords": ["common intention", "joint liability", "group offence"]
+},
+    {
+  "id": "IPC_120B",
+  "act": "IPC",
+  "section": "120B",
+  "title": "Punishment for Criminal Conspiracy",
+  "summary": "Punishes agreement between two or more persons to commit an illegal act.",
+  "content": "Whoever is a party to a criminal conspiracy to commit an offence shall be punished as provided under this section.",
+  "punishment": "Punishment depends on gravity of offence conspired.",
+  "keywords": ["criminal conspiracy", "illegal agreement", "planned crime"]
+},
+    {
+  "id": "IPC_307",
+  "act": "IPC",
+  "section": "307",
+  "title": "Attempt to Murder",
+  "summary": "Punishes attempt to commit murder.",
+  "content": "Whoever does any act with intention or knowledge that it would cause death, and such act amounts to attempt to murder, commits an offence.",
+  "punishment": "Imprisonment up to 10 years or life, and fine.",
+  "keywords": ["attempt to murder", "serious assault", "intent to kill"]
+},
+    {
+  "id": "IPC_498A",
+  "act": "IPC",
+  "section": "498A",
+  "title": "Cruelty by Husband or Relatives of Husband",
+  "summary": "Punishes cruelty against a married woman by husband or relatives.",
+  "content": "Whoever, being the husband or relative of the husband of a woman, subjects her to cruelty shall be punished.",
+  "punishment": "Imprisonment up to 3 years and fine.",
+  "keywords": ["domestic cruelty", "marital abuse", "dowry harassment"]
+},
+
+    {
+  "id": "IT_66C",
+  "act": "IT Act",
+  "section": "66C",
+  "title": "Identity Theft",
+  "summary": "Punishes fraudulent use of another person's digital identity.",
+  "content": "Whoever fraudulently or dishonestly makes use of the electronic signature, password, or unique identification feature of another person commits identity theft.",
+  "punishment": "Imprisonment up to 3 years and fine up to ₹1 lakh.",
+  "keywords": ["identity theft", "digital fraud", "cyber crime"]
+},
+    {
+  "id": "IT_66D",
+  "act": "IT Act",
+  "section": "66D",
+  "title": "Cheating by Personation Using Computer Resources",
+  "summary": "Punishes online cheating by impersonation.",
+  "content": "Whoever cheats by personation using computer resources or communication devices commits an offence under this section.",
+  "punishment": "Imprisonment up to 3 years and fine up to ₹1 lakh.",
+  "keywords": ["online fraud", "cyber cheating", "impersonation"]
+},
+    {
+  "id": "IT_67",
+  "act": "IT Act",
+  "section": "67",
+  "title": "Publishing Obscene Material in Electronic Form",
+  "summary": "Punishes publishing or transmitting obscene material electronically.",
+  "content": "Whoever publishes or transmits obscene material in electronic form shall be punished under this section.",
+  "punishment": "Imprisonment up to 3 years and fine for first conviction.",
+  "keywords": ["obscene content", "cyber pornography", "electronic transmission"]
+},
+    {
+  "id": "DV_3",
+  "act": "DV Act",
+  "section": "3",
+  "title": "Definition of Domestic Violence",
+  "summary": "Defines domestic violence including physical, emotional, verbal, sexual, and economic abuse.",
+  "content": "Domestic violence includes physical abuse, sexual abuse, verbal and emotional abuse, and economic abuse inflicted by a person in a domestic relationship upon a woman.",
+  "punishment": "Reliefs and protection orders provided under the Act.",
+  "keywords": ["domestic violence", "emotional abuse", "economic abuse", "physical abuse"]
+},
+    {
+  "id": "DV_18",
+  "act": "DV Act",
+  "section": "18",
+  "title": "Protection Orders",
+  "summary": "Empowers magistrate to pass protection orders against respondent.",
+  "content": "The Magistrate may pass a protection order prohibiting the respondent from committing acts of domestic violence or contacting the aggrieved person.",
+  "punishment": "Breach of protection order punishable under Section 31 of the Act.",
+  "keywords": ["protection order", "restraining order", "magistrate powers"]
+},
+    {
+  "id": "NDPS_21",
+  "act": "NDPS Act",
+  "section": "21",
+  "title": "Punishment for Contravention in Relation to Manufactured Drugs",
+  "summary": "Punishes possession, sale, or transport of manufactured narcotic drugs.",
+  "content": "Whoever contravenes provisions relating to manufactured drugs shall be punished based on quantity involved (small, intermediate, commercial).",
+  "punishment": "Punishment ranges from 1 year to 20 years depending on quantity, along with fine.",
+  "keywords": ["narcotics", "drug possession", "manufactured drugs"]
+},
+    {
+  "id": "NDPS_27",
+  "act": "NDPS Act",
+  "section": "27",
+  "title": "Punishment for Consumption of Narcotic Drugs",
+  "summary": "Punishes consumption of narcotic drugs or psychotropic substances.",
+  "content": "Whoever consumes narcotic drugs or psychotropic substances shall be punishable depending on substance category.",
+  "punishment": "Imprisonment up to 1 year or fine or both for certain substances.",
+  "keywords": ["drug consumption", "narcotic use", "psychotropic substances"]
+},
+    {
+  "id": "ARMS_25",
+  "act": "Arms Act",
+  "section": "25",
+  "title": "Punishment for Certain Offences",
+  "summary": "Punishes illegal manufacture, sale, possession, or transfer of arms and ammunition.",
+  "content": "Whoever acquires, possesses, or carries firearms or ammunition in contravention of the Act commits an offence under this section.",
+  "punishment": "Imprisonment not less than 3 years and may extend to 7 years, and fine.",
+  "keywords": ["illegal arms", "firearms possession", "ammunition offence"]
+}
+
+]
