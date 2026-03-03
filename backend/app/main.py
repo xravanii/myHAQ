@@ -4,6 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routes.auth_routes import router as auth_router
 from app.routes.query_routes import router as query_router
 
+
+from app.routes.complaint_routes import router as complaint_router
+
+
 app = FastAPI()
 
 # ✅ CORS MUST BE HERE
@@ -18,7 +22,7 @@ app.add_middleware(
 # ✅ Include routers AFTER middleware
 app.include_router(auth_router)
 app.include_router(query_router)
-
+app.include_router(complaint_router)
 
 @app.get("/")
 def root():

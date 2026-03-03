@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ComplaintGenerator from "./pages/ComplaintGenerator";
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/complaint" element={<ComplaintGenerator />} />
       </Routes>
     </BrowserRouter>
   );

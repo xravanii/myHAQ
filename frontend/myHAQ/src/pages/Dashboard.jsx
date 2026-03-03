@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import ResultPanel from "../components/ResultPanel";
+import ComplaintGenerator from "./ComplaintGenerator"; 
 import axios from "axios";
 
 const Dashboard = () => {
@@ -26,10 +27,7 @@ const Dashboard = () => {
         }
       );
 
-      // 🔹 LLM explanation below chat box
       setExplanation(response.data.explanation);
-
-      // 🔹 IPC sections in right panel
       setSections(response.data.sections);
 
     } catch (error) {
@@ -46,6 +44,7 @@ const Dashboard = () => {
       <div className="flex flex-1">
         {/* Center Content */}
         <div className="flex-1 p-10 overflow-y-auto">
+
           {activeView === "home" && (
             <div>
               <h2 className="text-3xl font-semibold mb-4">
@@ -79,7 +78,6 @@ const Dashboard = () => {
                 {loading ? "Analyzing..." : "Submit"}
               </button>
 
-              {/*  LLM Explanation Below Chat Box */}
               {explanation && (
                 <div className="mt-6 bg-blue-50 p-5 rounded-xl shadow-sm">
                   <h3 className="text-lg font-semibold text-blue-600 mb-2">
@@ -92,10 +90,19 @@ const Dashboard = () => {
               )}
             </div>
           )}
+
+          {/* ✅ THIS WAS MISSING */}
+          {activeView === "complaint" && (
+            <ComplaintGenerator />
+          )}
+
         </div>
 
-        {/* Right Panel for IPC Sections */}
-        <ResultPanel sections={sections} />
+        {/* Right Panel ONLY for Ask */}
+        {activeView === "ask" && (
+          <ResultPanel sections={sections} />
+        )}
+
       </div>
     </div>
   );
