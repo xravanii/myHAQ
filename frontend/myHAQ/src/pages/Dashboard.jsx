@@ -6,7 +6,8 @@ import axios from "axios";
 const Dashboard = () => {
   const [activeView, setActiveView] = useState("home");
   const [question, setQuestion] = useState("");
-  const [result, setResult] = useState(null);
+  const [sections, setSections] = useState([]);
+  const [explanation, setExplanation] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
@@ -25,7 +26,12 @@ const Dashboard = () => {
         }
       );
 
-      setResult(response.data);
+      // 🔹 LLM explanation below chat box
+      setExplanation(response.data.explanation);
+
+      // 🔹 IPC sections in right panel
+      setSections(response.data.sections);
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -39,7 +45,7 @@ const Dashboard = () => {
 
       <div className="flex flex-1">
         {/* Center Content */}
-        <div className="flex-1 p-10">
+        <div className="flex-1 p-10 overflow-y-auto">
           {activeView === "home" && (
             <div>
               <h2 className="text-3xl font-semibold mb-4">
@@ -72,12 +78,24 @@ const Dashboard = () => {
               >
                 {loading ? "Analyzing..." : "Submit"}
               </button>
+
+              {/*  LLM Explanation Below Chat Box */}
+              {explanation && (
+                <div className="mt-6 bg-blue-50 p-5 rounded-xl shadow-sm">
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    Legal Explanation
+                  </h3>
+                  <p className="text-gray-700 whitespace-pre-line">
+                    {explanation}
+                  </p>
+                </div>
+              )}
             </div>
           )}
         </div>
 
-        {/* Result Panel */}
-        <ResultPanel result={result} />
+        {/* Right Panel for IPC Sections */}
+        <ResultPanel sections={sections} />
       </div>
     </div>
   );
