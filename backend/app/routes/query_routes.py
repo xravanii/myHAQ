@@ -3,9 +3,11 @@ from pydantic import BaseModel
 from app.services.retrieval_service import search_sections
 from app.services.llm_service import generate_legal_response
 from app.routes.auth_routes import get_current_user
+from datetime import datetime
+from app.database.mongodb import get_database
 
 router = APIRouter(prefix="/query", tags=["Query"])
-
+db = get_database()
 
 class QueryRequest(BaseModel):
     question: str
@@ -19,16 +21,26 @@ def query_law(
     try:
         print("LLM called")
 
-        # 1️⃣ Retrieve sections
         sections = search_sections(data.question)
 
-        # 2️⃣ Generate explanation using Groq
         explanation = generate_legal_response(
             question=data.question,
             sections=sections
         )
 
-        # 3️⃣ Return response
+        # ✅ CLEAN explanation formatting
+        explanation = explanation.replace("\n\n", "\n").strip()
+
+        # ✅ SAVE BOTH RAG + LLM
+        db.history.insert_one({
+            "user_email": current_user["email"],
+            "type": "query",
+            "question": data.question,
+            "sections": sections,          # 🔥 RAG output stored
+            "explanation": explanation,    # 🔥 LLM output stored
+            "created_at": datetime.utcnow()
+        })
+
         return {
             "user": current_user["email"],
             "question": data.question,

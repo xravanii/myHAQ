@@ -3,8 +3,12 @@ from pydantic import BaseModel
 from fastapi.responses import StreamingResponse
 from app.services.complaint_service import generate_complaint_pdf
 from app.routes.auth_routes import get_current_user
+from datetime import datetime
+from app.database.mongodb import get_database
 
 router = APIRouter(prefix="/complaint", tags=["Complaint"])
+
+db = get_database()
 
 
 class ComplaintRequest(BaseModel):
@@ -21,10 +25,41 @@ class ComplaintRequest(BaseModel):
     loss_amount: str | None = None
 
 
+# ✅ MAIN GENERATE ROUTE
 @router.post("/generate")
 def generate_complaint(
     data: ComplaintRequest,
-    current_user: dict = Depends(get_current_user)  # 🔐 Protect route
+    current_user: dict = Depends(get_current_user)
+):
+    try:
+        pdf_buffer = generate_complaint_pdf(data)
+
+        # ✅ Save to history
+        db.history.insert_one({
+            "user_email": current_user["email"],
+            "type": "complaint",
+            "complaint_data": data.dict(),
+            "created_at": datetime.utcnow()
+        })
+
+        return StreamingResponse(
+            pdf_buffer,
+            media_type="application/pdf",
+            headers={
+                "Content-Disposition": "attachment; filename=complaint_letter.pdf"
+            },
+        )
+
+    except Exception as e:
+        print("Complaint Error:", repr(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+@router.post("/regenerate")
+def regenerate_complaint(
+    data: ComplaintRequest,
+    current_user: dict = Depends(get_current_user)
 ):
     try:
         pdf_buffer = generate_complaint_pdf(data)
@@ -38,5 +73,5 @@ def generate_complaint(
         )
 
     except Exception as e:
-        print("Complaint Error:", repr(e))
+        print("Regenerate Error:", repr(e))
         raise HTTPException(status_code=500, detail=str(e))

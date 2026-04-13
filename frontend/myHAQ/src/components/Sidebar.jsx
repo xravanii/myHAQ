@@ -2,56 +2,35 @@ import React from "react";
 
 const Sidebar = ({ activeView, setActiveView }) => {
   return (
-    <div className="w-64 h-screen bg-white border-r border-gray-200 flex flex-col p-6 shadow-sm">
-      
-      <h1 className="text-2xl font-bold text-blue-600 mb-10">
+    <div className="w-64 h-screen bg-gradient-to-b from-blue-600 to-blue-800 text-white flex flex-col p-6">
+
+      <h1 className="text-2xl font-bold mb-10">
         MYHAQ AI
       </h1>
 
-      {/* Home */}
-      <button
-        onClick={() => setActiveView("home")}
-        className={`mb-4 text-left px-3 py-2 rounded-lg transition ${
-          activeView === "home"
-            ? "bg-blue-100 text-blue-600 font-medium"
-            : "hover:bg-gray-100"
-        }`}
-      >
+      <button onClick={() => setActiveView("home")} className="mb-4 text-left hover:opacity-80">
         Home
       </button>
 
-      {/* Ask Question */}
-      <button
-        onClick={() => setActiveView("ask")}
-        className={`mb-4 text-left px-3 py-2 rounded-lg transition ${
-          activeView === "ask"
-            ? "bg-blue-100 text-blue-600 font-medium"
-            : "hover:bg-gray-100"
-        }`}
-      >
+      <button onClick={() => setActiveView("ask")} className="mb-4 text-left hover:opacity-80">
         Ask Question
       </button>
 
-      {/* Complaint Generator ✅ FIXED */}
-      <button
-        onClick={() => setActiveView("complaint")}
-        className={`mb-4 text-left px-3 py-2 rounded-lg transition ${
-          activeView === "complaint"
-            ? "bg-blue-100 text-blue-600 font-medium"
-            : "hover:bg-gray-100"
-        }`}
-      >
+      <button onClick={() => setActiveView("profile")} className="mb-4 text-left hover:opacity-80">
+        My Profile
+      </button>
+
+      <button onClick={() => setActiveView("complaint")} className="mb-4 text-left hover:opacity-80">
         Complaint Generator
       </button>
 
-      {/* Logout */}
       <div className="mt-auto">
         <button
           onClick={() => {
             localStorage.removeItem("token");
             window.location.href = "/login";
           }}
-          className="text-red-500 hover:text-red-600 transition"
+          className="text-red-300 hover:text-red-400"
         >
           Logout
         </button>

@@ -6,6 +6,7 @@ from app.routes.query_routes import router as query_router
 
 
 from app.routes.complaint_routes import router as complaint_router
+from app.routes.profile_routes import router as profile_router
 
 
 app = FastAPI()
@@ -23,6 +24,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(query_router)
 app.include_router(complaint_router)
+app.include_router(profile_router)
 
 @app.get("/")
 def root():
