@@ -4,6 +4,7 @@ import ResultPanel from "../components/ResultPanel";
 import ComplaintGenerator from "./ComplaintGenerator"; 
 import axios from "axios";
 import Profile from "./Profile";
+import Resources from "./Resources";
 
 const Dashboard = () => {
   const [activeView, setActiveView] = useState("home");
@@ -47,7 +48,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-cream">
       <Sidebar activeView={activeView} setActiveView={setActiveView} />
 
       <div className="flex flex-1">
@@ -58,52 +59,52 @@ const Dashboard = () => {
             <div className="flex flex-col justify-center h-full px-10">
               
               {/* HERO SECTION */}
-              <div className="mb-10">
-                <h1 className="text-5xl font-bold text-blue-600 mb-4">
-                  MYHAQ AI
+              <div className="mb-10 text-center">
+                <h1 className="text-6xl font-bold text-dark-navy mb-4">
+                  Welcome to <span className="text-gold-accent">MYHAQ AI</span>
                 </h1>
 
-                <p className="text-xl text-gray-700 max-w-2xl">
-                  Making legal knowledge simple, accessible, and understandable for everyone.
+                <p className="text-xl text-navy max-w-3xl mx-auto">
+                  Making legal knowledge simple, accessible, and understandable for everyone. Your trusted partner in navigating the complexities of the legal world.
                 </p>
               </div>
 
               {/* PROBLEM + SOLUTION */}
               <div className="grid grid-cols-2 gap-8">
                 
-                <div className="bg-white p-6 rounded-2xl shadow-md">
-                  <h3 className="text-xl font-semibold mb-3 text-red-500">
-                    Problem
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200/50">
+                  <h3 className="text-2xl font-semibold mb-4 text-dark-navy">
+                    The Problem
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-navy/80">
                     Legal systems are complex, filled with difficult language, and not easily accessible
-                    to common people. Many individuals do not understand their rights or legal options.
+                    to common people. Many individuals do not understand their rights or legal options, creating a barrier to justice.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-md">
-                  <h3 className="text-xl font-semibold mb-3 text-green-600">
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200/50">
+                  <h3 className="text-2xl font-semibold mb-4 text-dark-navy">
                     Our Solution
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-navy/80">
                     MYHAQ AI bridges this gap by providing simplified legal explanations,
-                    relevant law sections, and tools like complaint generation - all in one place.
+                    relevant law sections, and tools like complaint generation - all in one place. We empower you with knowledge.
                   </p>
                 </div>
 
               </div>
 
               {/* FEATURES */}
-              <div className="mt-10 bg-blue-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">
+              <div className="mt-12 bg-navy text-white p-8 rounded-xl shadow-2xl">
+                <h3 className="text-3xl font-semibold mb-6 text-center text-gold-accent">
                   What You Can Do
                 </h3>
 
-                <div className="grid grid-cols-2 gap-4 text-gray-700">
-                  <p>- Ask legal questions in simple language</p>
-                  <p>- Get relevant IPC sections instantly</p>
-                  <p>- Understand your rights clearly</p>
-                  <p>- Generate complaint letters easily</p>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-beige/90">
+                  <p className="pl-2 border-l-2 border-gold-accent">Ask legal questions in simple language</p>
+                  <p className="pl-2 border-l-2 border-gold-accent">Get relevant IPC sections instantly</p>
+                  <p className="pl-2 border-l-2 border-gold-accent">Understand your rights clearly</p>
+                  <p className="pl-2 border-l-2 border-gold-accent">Generate complaint letters easily</p>
                 </div>
               </div>
 
@@ -111,38 +112,45 @@ const Dashboard = () => {
           )}
 
           {activeView === "ask" && (
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               
-              <h2 className="text-3xl font-semibold mb-6 text-blue-600">
+              <h2 className="text-4xl font-bold mb-8 text-dark-navy text-center">
                 Ask Your Legal Question
               </h2>
 
-              <div className="bg-white p-6 rounded-2xl shadow-md">
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200/50">
                 
                 <textarea
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-4 bg-cream/50 border-2 border-navy/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                   rows="6"
-                  placeholder="Describe your legal issue in detail..."
+                  placeholder="Describe your legal issue in detail... For example: 'What are the consequences of cheque bounce?'"
                 />
 
                 <button
                   onClick={handleSubmit}
-                  className="mt-4 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition"
+                  disabled={loading}
+                  className="mt-6 w-full bg-navy text-white font-bold py-3 rounded-xl hover:bg-dark-navy transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Analyzing..." : "Submit"}
+                  {loading ? "Analyzing..." : "Get Legal Insights"}
                 </button>
 
               </div>
 
               {/* LLM OUTPUT */}
+              {loading && (
+                <div className="mt-8 text-center">
+                  <p className="text-navy">Loading, please wait...</p>
+                </div>
+              )}
+
               {explanation && (
-                <div className="mt-6 bg-green-50 p-5 rounded-xl shadow-sm">
-                  <h3 className="text-lg font-semibold text-green-700 mb-2">
-                    Explanation
+                <div className="mt-8 bg-white p-6 rounded-xl shadow-lg border border-gray-200/50">
+                  <h3 className="text-2xl font-semibold text-dark-navy mb-3">
+                    Legal Explanation
                   </h3>
-                  <p className="text-gray-700 whitespace-pre-line">
+                  <p className="text-navy/90 whitespace-pre-line">
                     {explanation}
                   </p>
                 </div>
@@ -157,6 +165,8 @@ const Dashboard = () => {
           )}
 
           {activeView === "profile" && <Profile />}
+
+          {activeView === "resources" && <Resources />}
 
         </div>
 

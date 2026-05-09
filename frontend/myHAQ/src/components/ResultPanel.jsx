@@ -4,27 +4,27 @@ const ResultPanel = ({ sections }) => {
   if (!sections || sections.length === 0) return null;
 
   return (
-    <div className="w-1/3 bg-gray-50 border-l p-6 overflow-y-auto">
-      <h3 className="text-xl font-semibold mb-4 text-blue-600">
-        Relevant Laws
+    <div className="w-1/3 bg-beige border-l-4 border-gold-accent p-6 overflow-y-auto">
+      <h3 className="text-2xl font-bold mb-6 text-dark-navy">
+        Relevant Legal Sections
       </h3>
 
       {sections.map((item) => (
         <div
           key={item.id}
-          className="bg-white p-4 rounded-xl shadow mb-4"
+          className="bg-cream p-5 rounded-xl shadow-md mb-4 border border-navy/10 hover:shadow-lg transition-shadow duration-300"
         >
-          <h4 className="font-semibold text-lg text-gray-800">
-            {item.act} Section {item.section}
+          <h4 className="font-semibold text-xl text-navy">
+            {item.act} - Section {item.section}
           </h4>
 
-          <p className="text-gray-600">{item.title}</p>
+          <p className="text-gold-accent font-medium">{item.title}</p>
 
-          <p className="mt-2 text-gray-700 text-sm">
+          <p className="mt-3 text-navy/80 text-sm">
             {item.summary}
           </p>
 
-          <p className="mt-2 text-gray-800 text-sm">
+          <p className="mt-3 text-navy text-sm">
             <strong>Punishment:</strong> {item.punishment}
           </p>
         </div>

@@ -67,84 +67,84 @@ const ComplaintGenerator = () => {
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
-      <div className="bg-white shadow-lg rounded-xl p-8">
+      <div className="bg-white shadow-2xl rounded-xl p-10 border border-navy/10">
 
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        <h2 className="text-4xl font-bold text-dark-navy mb-8 text-center">
           Complaint Letter Generator
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-8">
 
           {/* Personal Details */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+            <h3 className="text-xl font-semibold text-navy mb-4 border-b-2 border-gold-accent pb-2">
               Personal Details
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input name="full_name" placeholder="Full Name"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 required onChange={handleChange} />
 
               <input name="phone" placeholder="Phone Number"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 required onChange={handleChange} />
             </div>
 
-            <input name="address" placeholder="Address"
-              className="border rounded-lg p-3 mt-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            <input name="address" placeholder="Full Residential Address"
+              className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 mt-6 w-full focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
               required onChange={handleChange} />
           </div>
 
           {/* Incident Details */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+            <h3 className="text-xl font-semibold text-navy mb-4 border-b-2 border-gold-accent pb-2">
               Incident Details
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input type="date" name="incident_date"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 required onChange={handleChange} />
 
               <input name="incident_location" placeholder="Incident Location"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 required onChange={handleChange} />
             </div>
 
-            <input name="police_station" placeholder="Police Station (Optional)"
-              className="border rounded-lg p-3 mt-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            <input name="police_station" placeholder="Police Station (e.g., 'Civil Lines')"
+              className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 mt-6 w-full focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
               onChange={handleChange} />
 
             <textarea name="description"
-              placeholder="Describe the incident clearly..."
+              placeholder="Describe the incident clearly and chronologically..."
               rows="5"
-              className="border rounded-lg p-3 mt-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 mt-6 w-full focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
               required onChange={handleChange}
             />
           </div>
 
           {/* Optional Details */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+            <h3 className="text-xl font-semibold text-navy mb-4 border-b-2 border-gold-accent pb-2">
               Additional Information (Optional)
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input name="accused_name" placeholder="Accused Name"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input name="accused_name" placeholder="Accused Name(s)"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 onChange={handleChange} />
 
-              <input name="witness_details" placeholder="Witness Details"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              <input name="witness_details" placeholder="Witness Name(s) and Contact"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 onChange={handleChange} />
 
-              <input name="evidence_details" placeholder="Evidence Details"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              <input name="evidence_details" placeholder="Details of Evidence (e.g., 'CCTV footage')"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 onChange={handleChange} />
 
-              <input name="loss_amount" placeholder="Estimated Loss"
-                className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              <input name="loss_amount" placeholder="Estimated Loss/Value"
+                className="bg-cream/50 border-2 border-navy/20 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
                 onChange={handleChange} />
             </div>
           </div>
@@ -152,9 +152,9 @@ const ComplaintGenerator = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition"
+            className="w-full bg-navy hover:bg-dark-navy text-white py-4 rounded-lg font-bold text-lg transition-all duration-300 disabled:bg-gray-400"
           >
-            {loading ? "Generating..." : "Generate Complaint"}
+            {loading ? "Generating..." : "Download Complaint PDF"}
           </button>
 
         </form>

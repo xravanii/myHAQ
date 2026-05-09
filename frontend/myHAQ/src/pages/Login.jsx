@@ -35,16 +35,16 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded-2xl shadow-md w-96">
-        <h2 className="text-2xl font-semibold mb-6 text-blue-600">
-          Login to MYHAQ AI
+    <div className="h-screen flex items-center justify-center bg-cream">
+      <div className="bg-white p-10 rounded-xl shadow-2xl w-96 border border-navy/10">
+        <h2 className="text-3xl font-bold mb-8 text-dark-navy text-center">
+          Login to <span className="text-gold-accent">MYHAQ AI</span>
         </h2>
 
         <input
           type="email"
-          placeholder="Email"
-          className="w-full mb-4 p-3 border rounded-xl"
+          placeholder="Email Address"
+          className="w-full mb-4 p-3 bg-cream/50 border-2 border-navy/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
           value={form.email}
           onChange={(e) =>
             setForm({ ...form, email: e.target.value })
@@ -54,7 +54,7 @@ const Login = () => {
         <input
           type="password"
           placeholder="Password"
-          className="w-full mb-4 p-3 border rounded-xl"
+          className="w-full mb-6 p-3 bg-cream/50 border-2 border-navy/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-accent text-navy placeholder-navy/60"
           value={form.password}
           onChange={(e) =>
             setForm({ ...form, password: e.target.value })
@@ -63,15 +63,15 @@ const Login = () => {
 
         <button
           onClick={handleLogin}
-          className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+          className="w-full bg-navy text-white py-3 rounded-lg hover:bg-dark-navy transition-all duration-300 font-bold"
         >
           Login
         </button>
 
-        <p className="mt-4 text-sm text-gray-600">
+        <p className="mt-6 text-sm text-center text-navy/80">
           Don’t have an account?{" "}
-          <Link to="/register" className="text-blue-600">
-            Register
+          <Link to="/register" className="text-gold-accent font-semibold hover:underline">
+            Register Here
           </Link>
         </p>
       </div>
