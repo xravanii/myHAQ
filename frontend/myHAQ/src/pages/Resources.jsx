@@ -49,6 +49,36 @@ const resources = [
     description: "National emergency response support services.",
     link: "https://112.gov.in",
   },
+  {
+    title: "National Human Rights Commission",
+    category: "Human Rights",
+    description: "Report human rights violations and access citizen protection services.",
+    link: "https://nhrc.nic.in",
+  },
+  {
+    title: "Childline India",
+    category: "Child Protection",
+    description: "24×7 emergency support and protection helpline for children in distress.",
+    link: "https://www.childlineindia.org.in",
+  },
+  {
+    title: "E-Daakhil",
+    category: "Consumer Complaints",
+    description: "Online platform for filing consumer complaints digitally.",
+    link: "https://edaakhil.nic.in",
+  },
+  {
+    title: "DigiLocker",
+    category: "Government Services",
+    description: "Secure digital storage and access for official government documents.",
+    link: "https://www.digilocker.gov.in",
+  },
+  {
+    title: "Department of Justice",
+    category: "Judicial Services",
+    description: "Official portal for judicial reforms, legal information, and justice initiatives.",
+    link: "https://doj.gov.in",
+  },
 ];
 
 const getCategoryClass = (category) => {
@@ -69,6 +99,16 @@ const getCategoryClass = (category) => {
       return "bg-indigo-100 text-indigo-700";
     case "Emergency Help":
       return "bg-orange-100 text-orange-700";
+    case "Human Rights":
+      return "bg-teal-100 text-teal-700";
+    case "Child Protection":
+      return "bg-cyan-100 text-cyan-700";
+    case "Consumer Complaints":
+      return "bg-lime-100 text-lime-700";
+    case "Government Services":
+      return "bg-slate-100 text-slate-700";
+    case "Judicial Services":
+      return "bg-fuchsia-100 text-fuchsia-700";
     default:
       return "bg-gray-100 text-gray-700";
   }
