@@ -226,7 +226,7 @@ MYHAQ
 ## Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/myHAQ.git
+git clone https://github.com/xravanii/myHAQ.git
 cd myHAQ
 ```
 
@@ -287,17 +287,7 @@ GROQ_API_KEY=your_groq_api_key
 
 ---
 
-# 📷 Screenshots
 
-Add screenshots here:
-
-- Home Page
-- AI Legal Assistant
-- Complaint Generator
-- User Profile
-- Resources Page
-
----
 
 # 🚀 Future Enhancements
 
@@ -315,12 +305,7 @@ Add screenshots here:
 # 👩‍💻 Contributors
 
 - **Sravani**
-- Team Members
 
 ---
 
-# 📜 License
 
-This project was developed as part of an academic Software Engineering mini-project.
-
-Feel free to use it for learning and educational purposes.
