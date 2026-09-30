@@ -17,10 +17,9 @@ router = APIRouter(prefix="/profile", tags=["Profile"])
 #         "email": current_user["email"],
 #         "history": history
 #     }
-db = get_database()
-
 @router.get("/history")
 def get_history(current_user: dict = Depends(get_current_user)):
+    db = get_database()
     history = list(db.history.find(
         {"user_email": current_user["email"]},
         {"_id": 0}

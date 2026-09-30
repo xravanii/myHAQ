@@ -17,7 +17,7 @@ const resources = [
     title: "National Commission for Women",
     category: "Women Safety",
     description: "File complaints and access women protection resources.",
-    link: "https://ncw.nic.in",
+    link: "https://www.ncw.gov.in/",
   },
   {
     title: "Consumer Helpline",
@@ -59,7 +59,7 @@ const resources = [
     title: "Childline India",
     category: "Child Protection",
     description: "24×7 emergency support and protection helpline for children in distress.",
-    link: "https://www.childlineindia.org.in",
+    link: "https://childlineindia.org/a/about/childline-india",
   },
   {
     title: "E-Daakhil",

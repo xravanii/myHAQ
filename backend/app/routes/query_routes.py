@@ -7,7 +7,6 @@ from datetime import datetime
 from app.database.mongodb import get_database
 
 router = APIRouter(prefix="/query", tags=["Query"])
-db = get_database()
 
 class QueryRequest(BaseModel):
     question: str
@@ -19,6 +18,7 @@ def query_law(
     current_user: dict = Depends(get_current_user)
 ):
     try:
+        db = get_database()
         print("LLM called")
 
         sections = search_sections(data.question)

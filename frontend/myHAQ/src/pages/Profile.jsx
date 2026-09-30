@@ -9,7 +9,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://127.0.0.1:8000/profile/history", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/profile/history`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

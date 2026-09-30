@@ -36,7 +36,7 @@ const ComplaintGenerator = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/complaint/generate", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/complaint/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

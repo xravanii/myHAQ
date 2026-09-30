@@ -8,8 +8,6 @@ from app.database.mongodb import get_database
 
 router = APIRouter(prefix="/complaint", tags=["Complaint"])
 
-db = get_database()
-
 
 class ComplaintRequest(BaseModel):
     full_name: str
@@ -32,6 +30,7 @@ def generate_complaint(
     current_user: dict = Depends(get_current_user)
 ):
     try:
+        db = get_database()
         pdf_buffer = generate_complaint_pdf(data)
 
         # ✅ Save to history

@@ -17,7 +17,7 @@ const Login = () => {
       formData.append("password", form.password);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/auth/login",
+        `${import.meta.env.VITE_API_URL}/auth/login`,
         formData,
         {
           headers: {
