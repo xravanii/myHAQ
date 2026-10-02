@@ -1,6 +1,7 @@
 fastapi==0.134.0
 uvicorn==0.41.0
 pydantic==2.12.5
+email-validator==2.3.0
 python-multipart==0.0.22
 pymongo==4.16.0
 dnspython==2.8.0
