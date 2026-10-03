@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Sidebar from "../components/Sidebar";
 import ResultPanel from "../components/ResultPanel";
 import ComplaintGenerator from "./ComplaintGenerator"; 
@@ -153,6 +154,7 @@ const Dashboard = () => {
                   </h3>
                   <ReactMarkdown
                     className="text-navy/90"
+                    remarkPlugins={[remarkGfm]}
                     components={{
                       h1: (props) => <h1 className="text-2xl font-bold mt-4 mb-2" {...props} />,
                       h2: (props) => <h2 className="text-xl font-bold mt-4 mb-2" {...props} />,
