@@ -49,6 +49,5 @@ def query_law(
         }
 
     except Exception as e:
-        print("🔥 FULL ERROR:")
-        print(repr(e))
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"Query processing failed: {type(e).__name__}")
+        raise HTTPException(status_code=500, detail="Unable to process legal query")

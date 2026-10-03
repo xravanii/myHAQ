@@ -17,7 +17,7 @@ app = FastAPI()
 # ✅ CORS MUST BE HERE
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for development
+    allow_origins=["https://starlit-otter-cdcb57.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

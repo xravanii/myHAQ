@@ -8,7 +8,7 @@ from fastapi import HTTPException
 load_dotenv()
 
 
-SECRET_KEY = "supersecretkey"  # later move to .env
+SECRET_KEY = os.environ["JWT_SECRET_KEY"]
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 

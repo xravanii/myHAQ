@@ -50,8 +50,8 @@ def generate_complaint(
         )
 
     except Exception as e:
-        print("Complaint Error:", repr(e))
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"Complaint generation failed: {type(e).__name__}")
+        raise HTTPException(status_code=500, detail="Unable to generate complaint")
 
 
 
@@ -72,5 +72,5 @@ def regenerate_complaint(
         )
 
     except Exception as e:
-        print("Regenerate Error:", repr(e))
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"Complaint regeneration failed: {type(e).__name__}")
+        raise HTTPException(status_code=500, detail="Unable to regenerate complaint")
