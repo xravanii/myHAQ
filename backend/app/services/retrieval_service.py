@@ -7,9 +7,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VECTOR_PATH = os.path.join(BASE_DIR, "vector_store", "faiss_index.bin")
 METADATA_PATH = os.path.join(BASE_DIR, "vector_store", "sections.pkl")
 
+import threading
+
 _model = None
 _index = None
 _sections = None
+_loading_lock = threading.Lock()
 
 def _load_sections():
     global _sections
@@ -24,11 +27,22 @@ def _load_sections():
 
 def _load_model_and_index():
     global _model, _index
-    if _model is None:
-        from sentence_transformers import SentenceTransformer
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
-    if _index is None:
-        _index = faiss.read_index(VECTOR_PATH)
+    with _loading_lock:
+        if _model is None:
+            from sentence_transformers import SentenceTransformer
+            _model = SentenceTransformer("all-MiniLM-L6-v2")
+        if _index is None:
+            _index = faiss.read_index(VECTOR_PATH)
+
+def warmup_models_background():
+    def _target():
+        try:
+            _load_sections()
+            _load_model_and_index()
+            print("[OK] Background model warmup complete.")
+        except Exception as e:
+            print("[WARN] Background model warmup warning:", e)
+    threading.Thread(target=_target, daemon=True).start()
 
 def search_sections(query: str, top_k: int = 3):
     sections_list = _load_sections()

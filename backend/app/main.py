@@ -29,6 +29,11 @@ app.include_router(query_router)
 app.include_router(complaint_router)
 app.include_router(profile_router)
 
+@app.on_event("startup")
+def startup_event():
+    from app.services.retrieval_service import warmup_models_background
+    warmup_models_background()
+
 @app.get("/")
 def root():
     return {"message": "Auth system ready 🚀"}
