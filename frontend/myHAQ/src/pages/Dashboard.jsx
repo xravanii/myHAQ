@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import Sidebar from "../components/Sidebar";
 import ResultPanel from "../components/ResultPanel";
 import ComplaintGenerator from "./ComplaintGenerator"; 
@@ -150,9 +151,20 @@ const Dashboard = () => {
                   <h3 className="text-2xl font-semibold text-dark-navy mb-3">
                     Legal Explanation
                   </h3>
-                  <p className="text-navy/90 whitespace-pre-line">
+                  <ReactMarkdown
+                    className="text-navy/90"
+                    components={{
+                      h1: (props) => <h1 className="text-2xl font-bold mt-4 mb-2" {...props} />,
+                      h2: (props) => <h2 className="text-xl font-bold mt-4 mb-2" {...props} />,
+                      h3: (props) => <h3 className="text-lg font-bold mt-4 mb-2" {...props} />,
+                      h4: (props) => <h4 className="text-base font-bold mt-4 mb-2" {...props} />,
+                      p: (props) => <p className="mb-3 last:mb-0" {...props} />,
+                      ul: (props) => <ul className="list-disc pl-6 mb-3 space-y-1" {...props} />,
+                      ol: (props) => <ol className="list-decimal pl-6 mb-3 space-y-1" {...props} />,
+                    }}
+                  >
                     {explanation}
-                  </p>
+                  </ReactMarkdown>
                 </div>
               )}
 
