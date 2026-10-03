@@ -1,7 +1,6 @@
 import faiss
 import pickle
 import os
-from sentence_transformers import SentenceTransformer
 import numpy as np
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
