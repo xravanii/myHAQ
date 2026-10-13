@@ -14,14 +14,19 @@ from app.routes.profile_routes import router as profile_router
 
 app = FastAPI()
 
-# ✅ CORS MUST BE HERE
+
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://starlit-otter-cdcb57.netlify.app"],
+    allow_origins=[
+        "https://myhaq.netlify.app",
+        "https://starlit-otter-cdcb57.netlify.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ✅ Include routers AFTER middleware
 app.include_router(auth_router)
